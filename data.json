@@ -17,7 +17,7 @@
     {
         "tag": "early",
         "patterns": ["The bus is early","The bus was 2 minutes early", "The bus was 5 minutes early", "Two of the same buses came back to back"],
-        "responses": ["Sorry! The bus is running ahead of time", "Thanks", "Thanks for the update, will be reported"],
+        "responses": ["Sorry!The bus is running ahead of time", "Thanks", "Thanks for the update, will be reported"],
         "context":[""],
     }
 ]
