@@ -63,5 +63,5 @@
     "response":["We appriecate the additional details","Thanks for the feedback, please take a seat", "Take a seat, a report will be made", "Thank you for letting us know. We will try to fix as soon as possible","Thanks for the update, a report will be made","Report to the driver", " Thank you for letting us know. What kind of problems are you facing?", "Thank you for letting us know. We will try to fix it as soon as possible","Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."],
     "context":[""],
 }
-]
-}
+    "tag": "request",
+    "patterns":["I lost my SmartTrip Card", "I need a refund on my SmartTrip Card", "My SmartTrip card is not working", "I'm interested in applying for a job", "I will like to speak to a representative", "How long will it take me to get to _?", "What is the bus operator number?", "which bus will arrive sooner", "where is the nearset station", "is bus busy?", "How often does the bus come?" , "which stop is the busiest in this route?", "which stop has seat?", "i want to see the transportation manager", "What's the tempertuare on the bus ?"
