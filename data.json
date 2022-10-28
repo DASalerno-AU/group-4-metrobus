@@ -56,5 +56,12 @@
     "response": ["Thank you for providing this information","How many seats are avaiable?","Yay!","Thanks for the update","It is full with ___% so it should have seats"],
     "context":[""],
 }
+
+{
+    "tag": "safety",
+    "patterns":["Police work happening", "Road Constuction","Bus driver is performing fast and furious","The bus driver is driving very fast","Something suspicious is on the roof". "I see an unusual package left on the bus","There is a problem on the bus","The bus destination sign is wrong", "I was assulted on the bus", "I hear weird noises on the bus","I was just harassed on the bus","Cars are blocking the block stop"],
+    "response":["We appriecate the additional details","Thanks for the feedback, please take a seat", "Take a seat, a report will be made", "Thank you for letting us know. We will try to fix as soon as possible","Thanks for the update, a report will be made","Report to the driver", " Thank you for letting us know. What kind of problems are you facing?", "Thank you for letting us know. We will try to fix it as soon as possible","Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."],
+    "context":[""],
+}
 ]
 }
