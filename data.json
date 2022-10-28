@@ -42,5 +42,12 @@
     "context": [""],
 
 }
+
+{
+    "tag":"crowded",
+    "patterns": ["The bus is crowded", "The bus is at full capacity", "There is no space on the bus", "I have no space to move"],
+    "resposne":["Thank you for providing this information", "Oh no!", "Thanks for the update a report will be made", "Experiencing high volume, at this moment."],
+    "context":[""]
+}
 ]
 }
