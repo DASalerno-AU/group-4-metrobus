@@ -1,0 +1,18 @@
+{"intents":[
+
+    {"tag": "greeting",
+    "patterns":["Good Morning"],
+    "responses": ["Good morning, how may I assist you today?"],
+    "context":[""]
+}
+
+    {"tag":"late",
+    "patterns": ["The bus is late","My bus is late", "Running late","The bus route is detouring","The bus is cancelled","The bus did not arrive on time", "The bus is off-schedule","The bus did not come","Accident on ____","Traffic going eastbound", "Traffic going westbound", "I think it's running late","I'm already late for work","It's obviously late","The bus isn't on time today","It was supposed to be here 30 minutes ago", "The bus was late because of the traffic jam","The bus was late because of the weather", "The bus was late because of the rain", 
+    "The bus has not come yet","The bus is filled to capacity","The bus drivers are on strike today","____ bus will not arrive at ____ station", "Bus route may change because of construction","Always delayed and completely untimed","Why is the bus late?", "Why the bus did not come?","Why is the bus is not on time?","Why bus is late and busy", "The bus is 20 minutes delayed", "The bus is not on schedule", "I could not get to school on time", "I could not get to work on time","I do not know who manage the bus schedule",
+     "I would like to report a traffic violation"],
+    "responses":[],
+    "context":[],
+
+}
+]
+}
