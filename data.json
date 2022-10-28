@@ -20,5 +20,12 @@
         "responses": ["Sorry!The bus is running ahead of time", "Thanks", "Thanks for the update, will be reported"],
         "context":[""],
     }
+
+       { "tag": "not in service",
+       "patterns":["The bus os cancelled", "___ bus is not in service", "Out of reach", "The bus displayed out of service","Running problems","I can't stand riding the bus","It's not reliable", "I really do hate public transporation","The bus went past the stop", "No riders on the bus", "The bus is behind schedule", "The bus is in an accident", "The bus is out of order","Bus driver quit: I don't get paid enough for this","Why is the bus not in service?", "The bus is broken", "The bus did not stop at the station", "The bus was not in service", "Do not take the bus today", "I want to make a report",],
+       "response":["How long til the next bus", "Thank you for providing this information", "Please call 202-637-1328", "Can you describe more details?", "Sorry to hear that, What is the problem?", "We can understand, what is the problem?","How can I assist?", "Oh no","When will the next bus arrive?","Thanks for looping us in officals are on the way","Good to know","Thanks for the update, a report will be made", "Thank you for letting us know","We can make your report, How may we assist",],
+       "context":[""],
+
+}
 ]
 }
