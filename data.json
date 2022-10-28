@@ -49,5 +49,12 @@
     "resposne":["Thank you for providing this information", "Oh no!", "Thanks for the update a report will be made", "Experiencing high volume, at this moment."],
     "context":[""]
 }
+
+{
+    "tag": "seating",
+    "patterns": ["The bus is spacious, There is limited seating on the bus.","No riders on the bus","The bus is populated with gradeschool students","The bus is populated with college(possibly intoxicated students)", "All seats are taken in the bus?"],
+    "response": ["Thank you for providing this information","How many seats are avaiable?","Yay!","Thanks for the update","It is full with ___% so it should have seats"],
+    "context":[""],
+}
 ]
 }
