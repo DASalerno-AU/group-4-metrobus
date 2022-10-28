@@ -63,5 +63,50 @@
     "response":["We appriecate the additional details","Thanks for the feedback, please take a seat", "Take a seat, a report will be made", "Thank you for letting us know. We will try to fix as soon as possible","Thanks for the update, a report will be made","Report to the driver", " Thank you for letting us know. What kind of problems are you facing?", "Thank you for letting us know. We will try to fix it as soon as possible","Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."],
     "context":[""],
 }
-    "tag": "request",
-    "patterns":["I lost my SmartTrip Card", "I need a refund on my SmartTrip Card", "My SmartTrip card is not working", "I'm interested in applying for a job", "I will like to speak to a representative", "How long will it take me to get to _?", "What is the bus operator number?", "which bus will arrive sooner", "where is the nearset station", "is bus busy?", "How often does the bus come?" , "which stop is the busiest in this route?", "which stop has seat?", "i want to see the transportation manager", "What's the tempertuare on the bus ?"
+{    "tag": "request",
+    "patterns":["I lost my SmartTrip Card", "I need a refund on my SmartTrip Card", "My SmartTrip card is not working", "I'm interested in applying for a job", "I will like to speak to a representative", "How long will it take me to get to _?", "What is the bus operator number?", "which bus will arrive sooner", "where is the nearset station", "is bus busy?", "How often does the bus come?" , "which stop is the busiest in this route?", "which stop has seat?", "i want to see the transportation manager", "What's the tempertuare on the bus ?" , "Which buses will take me north?", "The bus is near ______?", "Where is the nearest bus stop?", "How do I get to the nearest bus stop?", "Am I at the right bus stop?", "How often does the bus come to this stop?", "Which route will take me to [xx]?", "What is the name of my driver?", "How many years of experience does the bus driver have?", "How much will this trip cost me?", "What is the capacity of the bus?"],
+    "response":["Please contact SmarTrip customer support at 1-888-762-7874.", " Please visit https://www.wmata.com/about/careers/", "  i am not sure i understand.", "it should be every 15 minutes ", "The bus driver name is _____", "This bus come every [mm].", "  Where is your location? Please provide the closest street corner.", "This bus driver has [X} many years of expereince", "Today the bus cost $2.00"],
+    "context":[""],
+}
+{
+    "tag": "emergency",
+    "patterns":["Theres a guy passed out on the bus", "I am concern about my safety", "I am lost ", "Help", "Call 911", "I witness a crime near the bus stop", "I witness a crime on the bus ", "I know information about the recent crime on the bus.", "Shooting on bus", "Shooting at bus", "Bus accident"],
+    "response":["oh no, i am going to report", "call 911", "where is your address", "what happen ", "calling", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD).", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD).", "call 911", "call 911", "call 911", "call 911"],
+    "context":[""],
+}
+{
+    "tag": "feedback",
+    "patterns":["Terrible management, over priced, and dangerous both systemically and physically.", "Bus has a suspicious smell ", "Bus is very dirty ", "Bus smells like body odor", "The bus driver behavior towards a passengar was unprofessional", "The bus driver is kind", "The bus driver is acknowledgeable", "The bus opertore is acting rude.", "I smell cigarette smoke on the bus.", "Somebody's playing loud music", "I would like to suggest a new bus stop", "The bus needs to come earlier.", "I missed my connection", "The bus stop needs cleaning" , "The bus announcements are inaccurate"],
+    "response":["I am going to report", "sorry to hear that, I am going to report that", "i am going to report thanks for feedback", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)", "Thank you for your suggestion. We will take action on that."],
+    "context":[""],
+}
+{
+    "tag": "update",
+    "patterns":["Next bus is in five minutes", "next bus is in two minutes ", "When is the bus going to get here?", "The bus driver is driving very slow", "The bus driver is very kind ", "The bus is fully handicap acessible ", "The bus is partially handicap accessible ", "The bus is not handicap accessible ", "The bus is very noisy ", "The bus has no lights", "The bus lights are requested via driver ", "There is no air on the bus ", "The bus driver did not follow orignal route ", "The next-stop display board is not operating", "The next-stop display board is fully operating ", " The bus is running on a Sunday schedule ", "The bus is runniing on a holiday schedule"],
+    "response":["So helpful!", "Bus no. [##] is [mm] minutes away from your stop.", "thanks for update"]
+    "context":[""],
+}
+{
+    "tag": "equipment",
+    "patterns":["The bus is accesible to bikes", "The bus bike rail is not accessible", "roof is leaking", "bus filled with trash", "Somebody split drink on bus", "Bicycle rack is not avialble", "wheelchair facility is out of service", "some thing smells bad in the bus", "The bus lights are not functioning", "The bus announcements are not working"],
+    "response":["Thanks for letting us know", "thanks for the update", "thanks for the report", "Thanks for letting us know"],
+    "context":[""],
+}
+{
+    "tag": "suspicious",
+    "patterns":["Bus driver is looking sus", "I see a suspicious package", "Gang activity ", "Crazy person on the bus", "The bus driver does not look well", "The bus driver use uncomfortable tone", "The bus has partial lighting "],
+    "response":["sorry about that im going to report", "thanks for update I am going to report", "I am going to report stay safe "],
+    "context":[""]
+}
+{
+    "tag":"damage",
+    "patterns":["There is no heat on the bus ", "The bus emergency window is broken", "Multiple seats are damage"],
+    "response":["thanks for update I am going to report"],
+    "context":[""]
+}
+{
+    "tag":"detour",
+    "patterns":["The bus route is detoured due to snow ", "Bus will delay due to construction", "The bus is detouring due to event at ___________"],
+    "response":["How long til the next bus?", "Where is the construction located ", "Thank you for letting us know."],
+    "context":[""]
+}
