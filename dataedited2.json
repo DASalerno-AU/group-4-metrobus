@@ -100,7 +100,7 @@
 {
     "tag":"damage",
     "patterns":["There is no heat on the bus ", "The bus emergency window is broken", "Multiple seats are damage"],
-    "response":["thanks for update I am going to report"],
+    "responses":["thanks for update I am going to report"],
     "context_set":""
 },
 {
