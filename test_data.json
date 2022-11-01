@@ -1,0 +1,46 @@
+{"intents": [
+    {"tag": "greeting",
+    "patterns": ["Good morning"
+				"Hi"
+				"Hello"
+				"Good afternoon",
+				"Good evening",
+				"Greetings"
+				],
+    "responses": ["Hello, how may I assist you today?"],
+    "context_set": ""
+    },
+    {"tag": "late",
+    "patterns": ["The bus is late",
+				"My bus is late", 
+                "Running late",
+                "The bus did not arrive on time",
+                "I think it's running late",
+                "I'm already late for work",
+                "The bus isn't on time today",
+                "The bus is filled to capacity",
+				"My bus got here later than it was supposed to"
+				], 
+    "responses":["Sorry to hear the bus is late; do you want to check the bus schedule?"],
+    "context_set": ""
+	},
+    {"tag": "early",
+	"patterns": ["The bus is early",
+				"My bus left early"
+				"The bus arrived ahead of schedule",
+				"My bus got here earlier than it was supposed to"
+				],
+    "responses":["Sorry to hear the bus is early; do you want to check the bus schedule?"],
+    "context_set": ""
+    },
+	{"tag": "on-time",
+    "patterns": ["The bus is on time",
+				"The bus arrived according to schedule",
+				"This schedule is on point",
+				"The bus got here when it had to"
+				],
+    "responses":["Amazing"],
+    "context_set": ""
+	},
+]
+}
