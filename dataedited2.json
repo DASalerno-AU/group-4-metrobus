@@ -45,7 +45,7 @@
 {
     "tag":"crowded",
     "patterns": ["The bus is crowded", "The bus is at full capacity", "There is no space on the bus", "I have no space to move"],
-    "resposnes":["Thank you for providing this information", "Oh no!", "Thanks for the update a report will be made", "Experiencing high volume, at this moment."],
+    "responses":["Thank you for providing this information", "Oh no!", "Thanks for the update a report will be made", "Experiencing high volume, at this moment."],
     "context_set":""
 },
 
