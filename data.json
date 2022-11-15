@@ -81,7 +81,8 @@
     {
     "tag": "early",
     "patterns": [
-        "The bus is early","The bus was 2 minutes early", 
+        "The bus is early",
+        "The bus was 2 minutes early", 
         "The bus was 5 minutes early", 
         "Two of the same buses came back to back"
         ],
@@ -238,7 +239,7 @@
     "context_set": ""
     },
 
-# Customer Request
+# Customer Service
     {
     "tag": "request",
     "patterns": [
