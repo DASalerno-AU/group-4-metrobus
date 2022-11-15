@@ -1,113 +1,450 @@
-{"intents":[
-
-    {"tag": "greeting",
-    "patterns":["Good Morning"],
-    "responses": ["Good morning, how may I assist you today?"],
-    "context":[""]
-}
-
-    {"tag":"late",
-    "patterns": ["The bus is late","My bus is late", "Running late","The bus route is detouring","The bus is cancelled","The bus did not arrive on time", "The bus is off-schedule","The bus did not come","Accident on ____","Traffic going eastbound", "Traffic going westbound", "I think it's running late","I'm already late for work","It's obviously late","The bus isn't on time today","It was supposed to be here 30 minutes ago", "The bus was late because of the traffic jam","The bus was late because of the weather", "The bus was late because of the rain", 
-    "The bus has not come yet","The bus is filled to capacity","The bus drivers are on strike today","____ bus will not arrive at ____ station", "Bus route may change because of construction","Always delayed and completely untimed","Why is the bus late?", "Why the bus did not come?","Why is the bus is not on time?","Why bus is late and busy", "The bus is 20 minutes delayed", "The bus is not on schedule", "I could not get to school on time", "I could not get to work on time","I do not know who manage the bus schedule",
-     "I would like to report a traffic violation"],
-    "responses":["The bus will arrive in ___ minutes","Oh no!","The bus will reroute soon", "The next bus will come __", "Please call emergency services", "Thanks","Bus will come in ___ minutes", "Do you want to check the next bus", "Sorry to hear that, do you want to check the bus schedule?","Sorry, thanks for the update, do you wnat to check the reason?", "Bus is late today, do you want to check it's schedule?", "Thanks for the update", "Thanks for info", "What is the time difference in the construction delay?", "Sad!","Sorry to hear that, it's because of the weather", "Sorry to hear that, bus is late today", "Thanks for the update, I am going to report","Ok, it's no big deal", "Please call 202-637-1328"],
-    "context":[""],
-
-}
+{"intents": [
+    
+# Greeting
     {
-        "tag": "early",
-        "patterns": ["The bus is early","The bus was 2 minutes early", "The bus was 5 minutes early", "Two of the same buses came back to back"],
-        "responses": ["Sorry!The bus is running ahead of time", "Thanks", "Thanks for the update, will be reported"],
-        "context":[""],
+    "tag": "greeting",
+    "patterns": [
+        "Good Morning"
+        ],
+    "responses": [
+        "Hello, how may I assist you today?"
+        ],
+    "context_set": ""
+    },
+    
+# Late Bus
+    {
+    "tag":"late",
+    "patterns": [
+        "The bus is late",
+        "My bus is late", 
+        "Running late",
+        "The bus route is detouring",
+        "The bus is cancelled",
+        "The bus did not arrive on time",
+        "The bus is off-schedule",
+        "The bus did not come",
+        "Accident on ____",
+        "Traffic going eastbound",
+        "Traffic going westbound",
+        "I think it's running late",
+        "I'm already late for work",
+        "It's obviously late",
+        "The bus isn't on time today",
+        "It was supposed to be here 30 minutes ago",
+        "The bus was late because of the traffic jam",
+        "The bus was late because of the weather",
+        "The bus was late because of the rain",
+        "The bus has not come yet",
+        "The bus is filled to capacity",
+        "The bus drivers are on strike today",
+        "____ bus will not arrive at ____ station",
+        "Bus route may change because of construction",
+        "Always delayed and completely untimed",
+        "Why is the bus late?",
+        "Why the bus did not come?",
+        "Why is the bus is not on time?",
+        "Why bus is late and busy",
+        "The bus is 20 minutes delayed",
+        "The bus is not on schedule",
+        "I could not get to school on time",
+        "I could not get to work on time",
+        "I do not know who manage the bus schedule",
+        "I would like to report a traffic violation"
+        ],
+    "responses": [
+        "The bus will arrive in ___ minutes",
+        "Oh no!",
+        "The bus will reroute soon",
+        "The next bus will come __",
+        "Please call emergency services",
+        "Thanks",
+        "Bus will come in ___ minutes",
+        "Do you want to check the next bus",
+        "Sorry to hear that, do you want to check the bus schedule?",
+        "Sorry, thanks for the update, do you wnat to check the reason?",
+        "Bus is late today, do you want to check it's schedule?",
+        "Thanks for the update",
+        "Thanks for info",
+        "What is the time difference in the construction delay?",
+        "Sad!",
+        "Sorry to hear that, it's because of the weather",
+        "Sorry to hear that, bus is late today",
+        "Thanks for the update, I am going to report",
+        "Ok, it's no big deal",
+        "Please call 202-637-1328"
+        ],
+    "context_set": ""
+    },
+    
+# Early Bus
+    {
+    "tag": "early",
+    "patterns": [
+        "The bus is early","The bus was 2 minutes early", 
+        "The bus was 5 minutes early", 
+        "Two of the same buses came back to back"
+        ],
+    "responses": [
+        "Sorry!The bus is running ahead of time",
+        "Thanks", 
+        "Thanks for the update, will be reported"
+        ],
+    "context_set": ""
+    },
+    
+# Bus Not in Service
+    {
+    "tag": "not in service",
+    "patterns": [
+        "The bus is cancelled",
+        "___ bus is not in service", 
+        "Out of reach", 
+        "The bus displayed out of service", 
+        "Running problems", 
+        "I can't stand riding the bus","It's not reliable", 
+        "I really do hate public transporation", 
+        "The bus went past the stop", 
+        "No riders on the bus", 
+        "The bus is behind schedule", 
+        "The bus is in an accident", 
+        "The bus is out of order", 
+        "Bus driver quit: I don't get paid enough for this", 
+        "Why is the bus not in service?", 
+        "The bus is broken", 
+        "The bus did not stop at the station", 
+        "The bus was not in service", 
+        "Do not take the bus today", 
+        "I want to make a report"
+        ],
+    "responses": [
+        "How long til the next bus", 
+        "Thank you for providing this information", 
+        "Please call 202-637-1328", 
+        "Can you describe more details?", 
+        "Sorry to hear that, What is the problem?", 
+        "We can understand, what is the problem?",
+        "How can I assist?", 
+        "Oh no",
+        "When will the next bus arrive?",
+        "Thanks for looping us in officals are on the way",
+        "Good to know",
+        "Thanks for the update, a report will be made", 
+        "Thank you for letting us know",
+        "We can make your report, How may we assist"
+        ],
+       "context_set": ""
+    },
+    
+# Bus is On Time
+    {
+    "tag": "on-time",
+    "patterns": [
+        "The bus is on time", 
+        "Perfect Schedule", 
+        "It should be coming soon"
+        ],
+    "responses": [
+        "Thank you!", 
+        "Amazing", 
+        "Thanks for the update"
+        ],
+    "context_set": ""
+    },
+
+# Bus Location
+    {
+    "tag": "location",
+    "patterns": [
+        "Where is the bus?", 
+        "What stop is _____ bus at?",
+        "Where does route ___ stop?",
+        "How many stops does ____ take?"
+        ],
+    "responses": [
+        "The bus is at ___", 
+        "Do you want to check the map?", 
+        "It will be __ stops"
+        ],
+    "context_set": ""
+    },
+
+# Bus is Crowded
+    {
+    "tag":"crowded",
+    "patterns": [
+        "The bus is crowded", 
+        "The bus is at full capacity", 
+        "There is no space on the bus", 
+        "I have no space to move"
+        ],
+    "responses": [
+        "Thank you for providing this information", 
+        "Oh no!", 
+        "Thanks for the update a report will be made", 
+        "Experiencing high volume, at this moment."
+        ],
+    "context_set": ""
+    },
+
+# Bus Seating
+    {
+    "tag": "seating",
+    "patterns": [
+        "The bus is spacious, There is limited seating on the bus.",
+        "No riders on the bus",
+        "The bus is populated with gradeschool students",
+        "The bus is populated with college(possibly intoxicated students)",
+        "All seats are taken in the bus?"
+        ],
+    "responses": [
+        "Thank you for providing this information",
+        "How many seats are avaiable?",
+        "Yay!",
+        "Thanks for the update",
+        "It is full with ___% so it should have seats"
+        ],
+    "context_set": ""
+    },
+
+# Safety Update
+    {
+    "tag": "safety",
+    "patterns":[
+        "Police work happening", 
+        "Road Constuction",
+        "Bus driver is performing fast and furious",
+        "The bus driver is driving very fast",
+        "Something suspicious is on the roof", 
+        "I see an unusual package left on the bus",
+        "There is a problem on the bus",
+        "The bus destination sign is wrong", 
+        "I was assulted on the bus", 
+        "I hear weird noises on the bus",
+        "I was just harassed on the bus",
+        "Cars are blocking the block stop"
+        ],
+    "responses": [
+        "We appriecate the additional details",
+        "Thanks for the feedback, please take a seat", 
+        "Take a seat, a report will be made", 
+        "Thank you for letting us know. We will try to fix as soon as possible",
+        "Thanks for the update, a report will be made",
+        "Report to the driver", 
+        "Thank you for letting us know. What kind of problems are you facing?", 
+        "Thank you for letting us know. We will try to fix it as soon as possible",
+        "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."
+        ],
+    "context_set": ""
+    },
+
+# Customer Request
+    {
+    "tag": "request",
+    "patterns": [
+        "I lost my SmartTrip Card", 
+        "I need a refund on my SmartTrip Card", 
+        "My SmartTrip card is not working", 
+        "I'm interested in applying for a job", 
+        "I will like to speak to a representative", 
+        "How long will it take me to get to _?", 
+        "What is the bus operator number?", 
+        "which bus will arrive sooner", 
+        "where is the nearset station", 
+        "is bus busy?", 
+        "How often does the bus come?",
+        "which stop is the busiest in this route?", 
+        "which stop has seat?",
+        "I want to see the transportation manager",
+        "What's the tempertuare on the bus?", 
+        "Which buses will take me north?", 
+        "The bus is near ______?", 
+        "Where is the nearest bus stop?", 
+        "How do I get to the nearest bus stop?", 
+        "Am I at the right bus stop?", 
+        "How often does the bus come to this stop?", 
+        "Which route will take me to [xx]?", 
+        "What is the name of my driver?", 
+        "How many years of experience does the bus driver have?", 
+        "How much will this trip cost me?", 
+        "What is the capacity of the bus?"
+        ],
+    "responses": [
+        "Please contact SmarTrip customer support at 1-888-762-7874.", 
+        "Please visit https://www.wmata.com/about/careers/", 
+        "I am not sure I understand.", 
+        "it should be every 15 minutes", 
+        "The bus driver name is _____", 
+        "This bus come every [mm].",
+        "Where is your location? Please provide the closest street corner.",
+        "This bus driver has [X} many years of expereince",
+        "Today the bus cost $2.00"
+        ],
+    "context_set": ""
+    },
+    
+# Emergency Situtation
+    {
+    "tag": "emergency",
+    "patterns": [
+        "Theres a guy passed out on the bus", 
+        "I am concern about my safety", 
+        "I am lost ", 
+        "Help", 
+        "Call 911", 
+        "I witnessed a crime near the bus stop", 
+        "I witnessed a crime on the bus ", 
+        "I know information about the recent crime on the bus.", 
+        "Shooting on bus", 
+        "Shooting at bus", 
+        "Bus accident"
+        ],
+    "responses": [
+        "oh no, i am going to report", 
+        "call 911", 
+        "where is your address", 
+        "what happen", 
+        "calling", 
+        "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD).", 
+        "call 911", 
+        ],
+    "context_set": ""
+    },
+    
+# Customer Feedback
+    {
+    "tag": "feedback",
+    "patterns": [
+        "Terrible management, over priced, and dangerous both systemically and physically.", 
+        "Bus has a suspicious smell", 
+        "Bus is very dirty ", 
+        "Bus smells like body odor", 
+        "The bus driver behavior towards a passengar was unprofessional", 
+        "The bus driver is kind", 
+        "The bus driver is acknowledgeable", 
+        "The bus opertore is acting rude.", 
+        "I smell cigarette smoke on the bus.", 
+        "Somebody's playing loud music", 
+        "I would like to suggest a new bus stop", 
+        "The bus needs to come earlier.", 
+        "I missed my connection", 
+        "The bus stop needs cleaning", 
+        "The bus announcements are inaccurate"
+        ],
+    "responses": [
+        "I am going to report", 
+        "sorry to hear that, I am going to report that", 
+        "i am going to report thanks for feedback", 
+        "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)",
+        "Thank you for your suggestion. We will take action on that."
+        ],
+    "context_set": ""
+    },
+
+# Customer Update
+    {
+    "tag": "update",
+    "patterns": [
+        "Next bus is in five minutes", 
+        "next bus is in two minutes", 
+        "When is the bus going to get here?", 
+        "The bus driver is driving very slow", 
+        "The bus driver is very kind ", 
+        "The bus is fully handicap acessible ",
+        "The bus is partially handicap accessible ",
+        "The bus is not handicap accessible ",
+        "The bus is very noisy ",
+        "The bus has no lights",
+        "The bus lights are requested via driver ",
+        "There is no air on the bus ", 
+        "The bus driver did not follow orignal route ", 
+        "The next-stop display board is not operating", 
+        "The next-stop display board is fully operating ",
+        "The bus is running on a Sunday schedule ", 
+        "The bus is runniing on a holiday schedule"
+        ],
+    "responses": [
+        "So helpful!", 
+        "Bus no. [##] is [mm] minutes away from your stop.", 
+        "thanks for update"
+        ],
+    "context_set":""
+    },
+
+# Equipment Information
+    {
+    "tag": "equipment",
+    "patterns": [
+        "The bus is accesible to bikes", 
+        "The bus bike rail is not accessible", 
+        "roof is leaking", 
+        "bus filled with trash", 
+        "Somebody split drink on bus", 
+        "Bicycle rack is not avialble", 
+        "wheelchair facility is out of service", 
+        "some thing smells bad in the bus", 
+        "The bus lights are not functioning", 
+        "The bus announcements are not working"
+        ],
+    "responses": [
+        "Thanks for letting us know", 
+        "thanks for the update", 
+        "thanks for the report", 
+        "Thanks for letting us know"
+        ],
+    "context_set":""
+    },
+
+# Suspicious
+    {
+    "tag": "suspicious",
+    "patterns": [
+        "Bus driver is looking sus", 
+        "I see a suspicious package", 
+        "Gang activity ", 
+        "Crazy person on the bus", 
+        "The bus driver does not look well", 
+        "The bus driver use uncomfortable tone", 
+        "The bus has partial lighting"
+        ],
+    "responses": [
+        "sorry about that im going to report", 
+        "thanks for update I am going to report", 
+        "I am going to report stay safe"
+        ],
+    "context_set": ""
+    },
+
+# Damage
+    {
+    "tag": "damage",
+    "patterns": [
+        "There is no heat on the bus ",
+        "The bus emergency window is broken", 
+        "Multiple seats are damage"
+        ],
+    "responses": [
+        "thanks for update I am going to report"
+        ],
+    "context_set": ""
+    },
+
+# Bus Taking Detour
+    {
+    "tag": "detour",
+    "patterns": [
+        "The bus route is detoured due to snow ", 
+        "Bus will delay due to construction", 
+        "The bus is detouring due to event at ___________"
+        ],
+    "responses": [
+        "How long til the next bus?", 
+        "Where is the construction located ", 
+        "Thank you for letting us know."
+        ],
+    "context_set": ""
     }
 
-       { 
-        "tag": "not in service",
-       "patterns":["The bus os cancelled", "___ bus is not in service", "Out of reach", "The bus displayed out of service","Running problems","I can't stand riding the bus","It's not reliable", "I really do hate public transporation","The bus went past the stop", "No riders on the bus", "The bus is behind schedule", "The bus is in an accident", "The bus is out of order","Bus driver quit: I don't get paid enough for this","Why is the bus not in service?", "The bus is broken", "The bus did not stop at the station", "The bus was not in service", "Do not take the bus today", "I want to make a report"],
-       "response":["How long til the next bus", "Thank you for providing this information", "Please call 202-637-1328", "Can you describe more details?", "Sorry to hear that, What is the problem?", "We can understand, what is the problem?","How can I assist?", "Oh no","When will the next bus arrive?","Thanks for looping us in officals are on the way","Good to know","Thanks for the update, a report will be made", "Thank you for letting us know","We can make your report, How may we assist"],
-       "context":[""],
+]
 
-}
-
-{
-    "tag": "on-time",
-    "patterns": ["The bus is on time", "Perfect Schedule", "It should be coming soon"],
-    "response":["Thank you!", "Amazing", "Thanks for the update"],
-    "context":[""],
-}
-{
-    "tag": "location",
-    "patterns": ["Where is the bus?", "What stop is _____ bus at?","Where does route ___ stop?","How many stops does ____ take?"],
-    "response":["The bus is at ___", "Do you want to check the map?", " It will be __ stops"],
-    "context": [""],
-
-}
-
-{
-    "tag":"crowded",
-    "patterns": ["The bus is crowded", "The bus is at full capacity", "There is no space on the bus", "I have no space to move"],
-    "resposne":["Thank you for providing this information", "Oh no!", "Thanks for the update a report will be made", "Experiencing high volume, at this moment."],
-    "context":[""]
-}
-
-{
-    "tag": "seating",
-    "patterns": ["The bus is spacious, There is limited seating on the bus.","No riders on the bus","The bus is populated with gradeschool students","The bus is populated with college(possibly intoxicated students)", "All seats are taken in the bus?"],
-    "response": ["Thank you for providing this information","How many seats are avaiable?","Yay!","Thanks for the update","It is full with ___% so it should have seats"],
-    "context":[""],
-}
-
-{
-    "tag": "safety",
-    "patterns":["Police work happening", "Road Constuction","Bus driver is performing fast and furious","The bus driver is driving very fast","Something suspicious is on the roof". "I see an unusual package left on the bus","There is a problem on the bus","The bus destination sign is wrong", "I was assulted on the bus", "I hear weird noises on the bus","I was just harassed on the bus","Cars are blocking the block stop"],
-    "response":["We appriecate the additional details","Thanks for the feedback, please take a seat", "Take a seat, a report will be made", "Thank you for letting us know. We will try to fix as soon as possible","Thanks for the update, a report will be made","Report to the driver", " Thank you for letting us know. What kind of problems are you facing?", "Thank you for letting us know. We will try to fix it as soon as possible","Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."],
-    "context":[""],
-}
-{    "tag": "request",
-    "patterns":["I lost my SmartTrip Card", "I need a refund on my SmartTrip Card", "My SmartTrip card is not working", "I'm interested in applying for a job", "I will like to speak to a representative", "How long will it take me to get to _?", "What is the bus operator number?", "which bus will arrive sooner", "where is the nearset station", "is bus busy?", "How often does the bus come?" , "which stop is the busiest in this route?", "which stop has seat?", "i want to see the transportation manager", "What's the tempertuare on the bus ?" , "Which buses will take me north?", "The bus is near ______?", "Where is the nearest bus stop?", "How do I get to the nearest bus stop?", "Am I at the right bus stop?", "How often does the bus come to this stop?", "Which route will take me to [xx]?", "What is the name of my driver?", "How many years of experience does the bus driver have?", "How much will this trip cost me?", "What is the capacity of the bus?"],
-    "response":["Please contact SmarTrip customer support at 1-888-762-7874.", " Please visit https://www.wmata.com/about/careers/", "  i am not sure i understand.", "it should be every 15 minutes ", "The bus driver name is _____", "This bus come every [mm].", "  Where is your location? Please provide the closest street corner.", "This bus driver has [X} many years of expereince", "Today the bus cost $2.00"],
-    "context":[""],
-}
-{
-    "tag": "emergency",
-    "patterns":["Theres a guy passed out on the bus", "I am concern about my safety", "I am lost ", "Help", "Call 911", "I witness a crime near the bus stop", "I witness a crime on the bus ", "I know information about the recent crime on the bus.", "Shooting on bus", "Shooting at bus", "Bus accident"],
-    "response":["oh no, i am going to report", "call 911", "where is your address", "what happen ", "calling", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD).", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD).", "call 911", "call 911", "call 911", "call 911"],
-    "context":[""],
-}
-{
-    "tag": "feedback",
-    "patterns":["Terrible management, over priced, and dangerous both systemically and physically.", "Bus has a suspicious smell ", "Bus is very dirty ", "Bus smells like body odor", "The bus driver behavior towards a passengar was unprofessional", "The bus driver is kind", "The bus driver is acknowledgeable", "The bus opertore is acting rude.", "I smell cigarette smoke on the bus.", "Somebody's playing loud music", "I would like to suggest a new bus stop", "The bus needs to come earlier.", "I missed my connection", "The bus stop needs cleaning" , "The bus announcements are inaccurate"],
-    "response":["I am going to report", "sorry to hear that, I am going to report that", "i am going to report thanks for feedback", "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)", "Thank you for your suggestion. We will take action on that."],
-    "context":[""],
-}
-{
-    "tag": "update",
-    "patterns":["Next bus is in five minutes", "next bus is in two minutes ", "When is the bus going to get here?", "The bus driver is driving very slow", "The bus driver is very kind ", "The bus is fully handicap acessible ", "The bus is partially handicap accessible ", "The bus is not handicap accessible ", "The bus is very noisy ", "The bus has no lights", "The bus lights are requested via driver ", "There is no air on the bus ", "The bus driver did not follow orignal route ", "The next-stop display board is not operating", "The next-stop display board is fully operating ", " The bus is running on a Sunday schedule ", "The bus is runniing on a holiday schedule"],
-    "response":["So helpful!", "Bus no. [##] is [mm] minutes away from your stop.", "thanks for update"]
-    "context":[""],
-}
-{
-    "tag": "equipment",
-    "patterns":["The bus is accesible to bikes", "The bus bike rail is not accessible", "roof is leaking", "bus filled with trash", "Somebody split drink on bus", "Bicycle rack is not avialble", "wheelchair facility is out of service", "some thing smells bad in the bus", "The bus lights are not functioning", "The bus announcements are not working"],
-    "response":["Thanks for letting us know", "thanks for the update", "thanks for the report", "Thanks for letting us know"],
-    "context":[""],
-}
-{
-    "tag": "suspicious",
-    "patterns":["Bus driver is looking sus", "I see a suspicious package", "Gang activity ", "Crazy person on the bus", "The bus driver does not look well", "The bus driver use uncomfortable tone", "The bus has partial lighting "],
-    "response":["sorry about that im going to report", "thanks for update I am going to report", "I am going to report stay safe "],
-    "context":[""]
-}
-{
-    "tag":"damage",
-    "patterns":["There is no heat on the bus ", "The bus emergency window is broken", "Multiple seats are damage"],
-    "response":["thanks for update I am going to report"],
-    "context":[""]
-}
-{
-    "tag":"detour",
-    "patterns":["The bus route is detoured due to snow ", "Bus will delay due to construction", "The bus is detouring due to event at ___________"],
-    "response":["How long til the next bus?", "Where is the construction located ", "Thank you for letting us know."],
-    "context":[""]
-}
 }
