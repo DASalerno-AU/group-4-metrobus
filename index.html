@@ -1,14 +1,24 @@
-<html>
-  <head> METRO TRACKER
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metro Map!</title>
+    <!-- linking to PyScript assets -->
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   </head>
   <body>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="metro.html">Metro</a>
-    <a href="gmap.html">Google Map</a>
-  </nav>
-  <h1> This website is for the metro </h1>  
-  <p> This is so fun!!! </p>
+    <py-script src="./newmodelchatbot.py"></py-script>
+    <iframe
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBiXvW_kWXrD4V9SCWcsruRY16-FJBi4Rs&q=NW+DC">
+  </iframe>
+  </body>
   </body>
 </html>
