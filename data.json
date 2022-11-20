@@ -27,28 +27,14 @@
         "The bus is late",
         "My bus is late", 
         "Running late",
-        "The bus route is detouring",
-        "The bus is cancelled",
         "The bus did not arrive on time",
         "The bus is off-schedule",
         "The bus did not come",
-        "Accident on ____",
-        "Traffic going eastbound",
-        "Traffic going westbound",
         "I think it's running late",
-        "I'm already late for work",
         "It's obviously late",
         "The bus isn't on time today",
         "It was supposed to be here 30 minutes ago",
-        "The bus was late because of the traffic jam",
-        "The bus was late because of the weather",
-        "The bus was late because of the rain",
         "The bus has not come yet",
-        "The bus is filled to capacity",
-        "The bus drivers are on strike today",
-        "____ bus will not arrive at ____ station",
-        "Bus route may change because of construction",
-        "Always delayed and completely untimed",
         "Why is the bus late?",
         "Why the bus did not come?",
         "Why is the bus is not on time?",
@@ -57,8 +43,6 @@
         "The bus is not on schedule",
         "I could not get to school on time",
         "I could not get to work on time",
-        "I do not know who manage the bus schedule",
-        "I would like to report a traffic violation"
         ],
     "responses": [
         "Thank you for providing this information for a late bus."
@@ -142,57 +126,47 @@
     "context_set": ""
     },
 
-# Bus Location
+# Route and Station Information
     {
-    "tag": "location",
+    "tag": "rs_info",
     "patterns": [
-        "Where is the bus?", 
-        "What stop is _____ bus at?",
-        "Where does route ___ stop?",
-        "How many stops does ____ take?"
+        "What is the bus operator number?", 
+        "which bus will arrive sooner", 
+        "where is the nearset station", 
+        "How often does the bus come?",
+        "which stop is the busiest in this route?", 
+        "which stop has seat?",
         ],
     "responses": [
-        "The bus is at ___", 
-        "Do you want to check the map?", 
-        "It will be __ stops"
+        "Please select from one of the following options"
         ],
     "context_set": ""
     },
 
-# Bus is Crowded
+# Bus Capacity and Seating
     {
-    "tag":"crowded",
+    "tag": "capacity",
     "patterns": [
         "The bus is crowded", 
         "The bus is at full capacity", 
         "There is no space on the bus", 
-        "I have no space to move"
-        ],
-    "responses": [
-        "Thank you for providing this information", 
-        "Oh no!", 
-        "Thanks for the update a report will be made", 
-        "Experiencing high volume, at this moment."
-        ],
-    "context_set": ""
-    },
-
-# Bus Seating
-    {
-    "tag": "seating",
-    "patterns": [
-        "The bus is spacious, There is limited seating on the bus.",
+        "I have no space to move",
+        "Buses are overcrowded",
+        "There is overcrowing on the bus",
+        "The bus is spacious", 
+        "There are plenty of seats available on the bus"
+        "There are no seats availble on the bus"
+        "No open seats"
+        "Insufficient seating"
+        "Sufficient seating is available"
+        "There is nowhere for me to sit"
+        "I'm having to stand on the bus"
+        "There is limited seating on the bus.",
         "No riders on the bus",
-        "The bus is populated with gradeschool students",
-        "The bus is populated with college(possibly intoxicated students)",
-        "All seats are taken in the bus?"
+        "All seats are taken in the bus?"        
         ],
     "responses": [
-        "Thank you for providing this information",
-        "How many seats are avaiable?",
-        "Yay!",
-        "Thanks for the update",
-        "It is full with ___% so it should have seats"
+        "Thank you for providing this bus capacity information."
         ],
     "context_set": ""
     },
@@ -201,9 +175,9 @@
     {
     "tag": "safety",
     "patterns":[
-        "Police work happening", 
-        "Road Constuction",
-        "Bus driver is performing fast and furious",
+        "Police work is happening", 
+        "Road Constuction has made the route more dangerous",
+        "Bus driver is driving recklessly",
         "The bus driver is driving very fast",
         "Something suspicious is on the roof", 
         "I see an unusual package left on the bus",
@@ -213,17 +187,16 @@
         "I hear weird noises on the bus",
         "I was just harassed on the bus",
         "Cars are blocking the block stop"
+        "Bus driver is looking suspicious", 
+        "I see a suspicious package", 
+        "There is criminal activity ", 
+        "Crazy person on the bus", 
+        "The bus driver does not look well", 
+        "The bus driver use uncomfortable tone", 
+        "The bus has partial lighting"
         ],
     "responses": [
-        "We appriecate the additional details",
-        "Thanks for the feedback, please take a seat", 
-        "Take a seat, a report will be made", 
-        "Thank you for letting us know. We will try to fix as soon as possible",
-        "Thanks for the update, a report will be made",
-        "Report to the driver", 
-        "Thank you for letting us know. What kind of problems are you facing?", 
-        "Thank you for letting us know. We will try to fix it as soon as possible",
-        "Please report this incident to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."
+        "Please report suspicious activity and safety incidents to MTPD by either calling 202-962-2121 or texting 696873 (MyMTPD)."
         ],
     "context_set": ""
     },
@@ -237,14 +210,6 @@
         "My SmartTrip card is not working", 
         "I'm interested in applying for a job", 
         "I will like to speak to a representative", 
-        "How long will it take me to get to _?", 
-        "What is the bus operator number?", 
-        "which bus will arrive sooner", 
-        "where is the nearset station", 
-        "is bus busy?", 
-        "How often does the bus come?",
-        "which stop is the busiest in this route?", 
-        "which stop has seat?",
         "I want to see the transportation manager",
         "What's the tempertuare on the bus?", 
         "Which buses will take me north?", 
@@ -383,26 +348,6 @@
         "Thanks for letting us know"
         ],
     "context_set":""
-    },
-
-# Suspicious
-    {
-    "tag": "suspicious",
-    "patterns": [
-        "Bus driver is looking sus", 
-        "I see a suspicious package", 
-        "Gang activity ", 
-        "Crazy person on the bus", 
-        "The bus driver does not look well", 
-        "The bus driver use uncomfortable tone", 
-        "The bus has partial lighting"
-        ],
-    "responses": [
-        "sorry about that im going to report", 
-        "thanks for update I am going to report", 
-        "I am going to report stay safe"
-        ],
-    "context_set": ""
     },
 
 # Damage
