@@ -4,7 +4,15 @@
     {
     "tag": "greeting",
     "patterns": [
-        "Good Morning"
+        "Good Morning",
+        "Good afternoon", 
+        "Good evening",
+        "Hello"
+        "Hi"
+        "Greetings"
+        "Howdy"
+        "Hey"
+        "Hey there"
         ],
     "responses": [
         "Hello, how may I assist you today?"
@@ -53,26 +61,7 @@
         "I would like to report a traffic violation"
         ],
     "responses": [
-        "The bus will arrive in ___ minutes",
-        "Oh no!",
-        "The bus will reroute soon",
-        "The next bus will come __",
-        "Please call emergency services",
-        "Thanks",
-        "Bus will come in ___ minutes",
-        "Do you want to check the next bus",
-        "Sorry to hear that, do you want to check the bus schedule?",
-        "Sorry, thanks for the update, do you wnat to check the reason?",
-        "Bus is late today, do you want to check it's schedule?",
-        "Thanks for the update",
-        "Thanks for info",
-        "What is the time difference in the construction delay?",
-        "Sad!",
-        "Sorry to hear that, it's because of the weather",
-        "Sorry to hear that, bus is late today",
-        "Thanks for the update, I am going to report",
-        "Ok, it's no big deal",
-        "Please call 202-637-1328"
+        "Thank you for providing this information for a late bus."
         ],
     "context_set": ""
     },
