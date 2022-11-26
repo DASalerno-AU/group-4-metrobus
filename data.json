@@ -1,6 +1,5 @@
 {"intents": [
     
-# Greeting
     {
     "tag": "greeting",
     "patterns": [
@@ -20,9 +19,8 @@
     "context_set": ""
     },
     
-# Late Bus
     {
-    "tag":"late",
+    "tag": "late",
     "patterns": [
         "The bus is late",
         "My bus is late", 
@@ -50,7 +48,6 @@
     "context_set": ""
     },
     
-# Early Bus
     {
     "tag": "early",
     "patterns": [
@@ -61,7 +58,7 @@
         "This bus arrived ahead of schedule",
         "I missed my bus because it left early",
         "Two of the same buses came back to back",
-        "Why has the bus come early?,
+        "Why has the bus come early?",
         "I think the bus is early"
         ],
     "responses": [
@@ -70,7 +67,6 @@
     "context_set": ""
     },
     
-# Bus Not in Service
     {
     "tag": "not in service",
     "patterns": [
@@ -100,7 +96,6 @@
        "context_set": ""
     },
     
-# Bus is On Time
     {
     "tag": "ontime",
     "patterns": [
@@ -117,7 +112,6 @@
     "context_set": ""
     },
 
-# Route and Stop Information
     {
     "tag": "rs_info",
     "patterns": [
@@ -134,7 +128,6 @@
     "context_set": ""
     },
 
-# Bus Capacity and Seating
     {
     "tag": "capacity",
     "patterns": [
@@ -162,7 +155,6 @@
     "context_set": ""
     },
 
-# Safety Update
     {
     "tag": "safety",
     "patterns":[
@@ -192,7 +184,6 @@
     "context_set": ""
     },
 
-# Customer Service
     {
     "tag": "request",
     "patterns": [
@@ -221,7 +212,6 @@
     "context_set": ""
     },
     
-# Emergency Situtation
     {
     "tag": "emergency",
     "patterns": [
@@ -248,7 +238,6 @@
     "context_set": ""
     },
     
-# Customer Feedback
     {
     "tag": "feedback",
     "patterns": [
@@ -275,7 +264,6 @@
     "context_set": ""
     },
 
-# Customer Update
     {
     "tag": "update",
     "patterns": [
@@ -300,7 +288,6 @@
     "context_set": ""
     },
 
-# Equipment Information
     {
     "tag": "equipment",
     "patterns": [
@@ -322,7 +309,6 @@
     "context_set": ""
     },
 
-# Damage
     {
     "tag": "damage",
     "patterns": [
@@ -336,7 +322,6 @@
     "context_set": ""
     },
 
-# Bus Taking Detour
     {
     "tag": "detour",
     "patterns": [
