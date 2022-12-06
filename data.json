@@ -328,7 +328,7 @@
         "The bus route is detoured due to snow ", 
         "Bus will delay due to construction", 
         "The bus is taking an alternate route",
-        "What is the alternate route?,
+        "What is the alternate route?",
         "Is the bus taking a detour?"
         "The bus is detouring due to an unexpected event"
         ],
